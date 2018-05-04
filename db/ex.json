@@ -1,0 +1,10 @@
+{
+  "img": "something",
+  "name": "Dudette",
+  "age": 45,
+  "flaws": [
+    "flaw 1",
+    "flaw 2",
+    "flaw 3"
+  ]
+}
