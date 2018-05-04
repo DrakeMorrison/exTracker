@@ -1,0 +1,22 @@
+{
+  "locations": [
+    {
+      "img": "something1",
+      "name": "bad place",
+      "address": "even more bad",
+      "time": "After Dark"
+    },
+    {
+      "img": "something2",
+      "name": "bad place",
+      "address": "even more bad",
+      "time": "After Dark"
+    },
+    {
+      "img": "something3",
+      "name": "bad place",
+      "address": "even more bad",
+      "time": "After Dark"
+    }
+  ]
+}
