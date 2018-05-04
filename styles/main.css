@@ -1,3 +1,12 @@
 #searchBar {
   width: 34%;
 }
+
+body {
+  padding-top: 60px;
+}
+
+#ex-div {
+  position: fixed;
+  z-index: 1;
+}
