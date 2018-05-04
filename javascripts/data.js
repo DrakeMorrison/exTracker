@@ -7,7 +7,12 @@ const locationsLoad = (data) => {
 };
 
 const exLoads = (data) => {
-  dom.buildEx(data);
+  const exObject = new Object();
+  exObject.name = data.name;
+  exObject.img = data.img;
+  exObject.age = data.age;
+  exObject.flaws = data.flaws.slice(0,8);
+  dom.buildEx(exObject);
 };
 
 const ajaxFail = (error) => {
