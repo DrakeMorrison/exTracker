@@ -1,3 +1,7 @@
 #searchBar {
   width: 34%;
 }
+
+body {
+  padding-top: 60px;
+}

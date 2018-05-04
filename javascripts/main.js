@@ -1,1 +1,3 @@
-console.log('YAY!');
+const startApp = require('./data.js');
+
+startApp();
