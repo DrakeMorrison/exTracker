@@ -1,13 +1,26 @@
 const buildLocations = (array) => {
-  // const domString = '';
-  console.error('buildLocations', array);
+  let domString = '';
+  $(array).each((i, locale) => {
+    domString += `<div class="panel panel-info">`;
+    domString += `<div class="panel-heading">`;
+    domString += `<h3 class="panel-title text-capitalize">${locale.name}</h3>`;
+    domString += `</div>`;
+    domString +=   `<div class="panel-body">`;
+    domString +=     `<img class='img-responsive img-rounded'src='${locale.img}' alt='...'>`;
+    domString +=     `<h6 class='text-capitalize'>${locale.address}</h6>`;
+    domString +=     `<p>Arrival Time: <strong class='text-capitalize'>${locale.time}</strong></p>`;
+    domString +=   `</div>`;
+    domString += `</div>`;
+  });
+
+  $('#locations-div').html(domString);
 };
 
 const buildEx = (ex) => {
   let domString = '';
-  domString += `<div id='ex-panel' class="panel panel-default">`;
+  domString += `<div id='ex-panel' class="panel panel-danger">`;
   domString += `<div class="panel-heading">`;
-  domString += `<h3 class="panel-title">${ex.name}</h3>`;
+  domString += `<h3 class="panel-title text-capitalize">${ex.name}</h3>`;
   domString += `</div>`;
   domString += `<div class="panel-body">`;
   domString += `<img class='img-responsive'src='${ex.img}' alt='...'>`;
@@ -15,7 +28,7 @@ const buildEx = (ex) => {
   domString += `</div>`;
   domString += `<ul class='list-group'>`;
   ex.flaws.forEach(flaw => {
-    domString += `<li class='list-group-item'>${flaw}</li>`;
+    domString += `<li class='list-group-item text-capitalize'>${flaw}</li>`;
   });
   domString += `</ul>`;
   domString += `</div>`;
