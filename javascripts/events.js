@@ -1,5 +1,8 @@
 const filterSearchBar = (e) => {
-  console.error('filterSearchBar', e);
+  const searchElements = $('.search');
+  if (searchElements.text().includes(e.target.value)) {
+    console.error('!Success!');
+  }
 };
 
 const filterTime = (e) => {
@@ -28,7 +31,7 @@ const resetBtn = () => {
 };
 
 const addEventListeners = () => {
-  $('#searchBar').on('keydown', filterSearchBar);
+  $('#searchBar').on('keypress', filterSearchBar);
   $('.time-btn').on('click', filterTime);
   $('#reset-btn').on('click', resetBtn);
 };
