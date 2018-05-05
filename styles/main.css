@@ -10,3 +10,30 @@ body {
   position: fixed;
   z-index: 1;
 }
+
+#ex-navbar-btn {
+  float: none;
+  margin-left: 15px;
+}
+
+/* Navbar Ex-div */
+@media (min-width: 768px) {
+  #ex-navbar-div {
+    display: none !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar-brand {
+    transform: translateX(-50%);
+    left: 50%;
+    position: absolute;
+  }
+
+  #ex-div {
+    display: none;
+  }
+}
+
+
+

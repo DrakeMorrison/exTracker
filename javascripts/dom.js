@@ -34,6 +34,7 @@ const buildEx = (ex) => {
   domString += `</div>`;
 
   $('#ex-div').html(domString);
+  $('#ex-navbar-div').html(domString);
 };
 
 module.exports = {
