@@ -32,17 +32,21 @@
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <div class="navbar-form navbar-right">
           <div class="form-group">
-            <div class='input-group'>
             <input id='searchBar' type="text" class="form-control" placeholder="Search Locations">
-              <span class='input-groub-btn'>
-                <span class="btn-group" role="group" aria-label="...">
-                  <button id='morning-btn' type="button" class="time-btn btn btn-danger">Morning</button>
-                  <button id='afternoon-btn' type="button" class="time-btn btn btn-warning">Afternoon</button>
-                  <button id='evening-btn' type="button" class="time-btn btn btn-success">Evening</button>
-                  <button id='after-dark-btn' type="button" class="time-btn btn btn-info">After Dark</button>
-                </span>
+              <span class="btn-group btn-group-justified justify-outside" role="group" aria-label="...">
+                  <span class="btn-group justify-inside" role="group" aria-label="...">
+                    <button id='morning-btn' type="button" class="time-btn btn btn-danger">Morning</button>
+                  </span>
+                  <span class="btn-group justify-inside" role="group" aria-label="...">
+                    <button id='afternoon-btn' type="button" class="time-btn btn btn-warning">Afternoon</button>
+                  </span>
+                  <span class="btn-group justify-inside" role="group" aria-label="...">
+                    <button id='evening-btn' type="button" class="time-btn btn btn-success">Evening</button>
+                  </span>
+                  <span class="btn-group justify-inside" role="group" aria-label="...">
+                    <button id='after-dark-btn' type="button" class="time-btn btn btn-info">After Dark</button>
+                  </span>
               </span>
-            </div>
           </div>
         </div>
       </div><!-- /.navbar-collapse -->
