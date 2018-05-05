@@ -1,7 +1,3 @@
-#searchBar {
-  width: 34%;
-}
-
 body {
   padding-top: 60px;
 }
@@ -20,6 +16,18 @@ body {
 @media (min-width: 768px) {
   #ex-navbar-div {
     display: none !important;
+  }
+
+  .justify-outside {
+    display: inline-block;
+    table-layout: auto;
+    width: unset;
+  }
+
+  .justify-inside {
+    display: block !important;
+    float: left !important;
+    width: unset !important;
   }
 }
 
