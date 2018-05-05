@@ -21,6 +21,10 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
+        <button id='ex-navbar-btn' type='button' class='navbar-toggle collapsed' data-toggle='collapse' data-target='#ex-navbar-div' aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="glyphicon glyphicon-user text-danger"></span>
+        </button>
         <a class="navbar-brand" href="#">Ex Tracker</a>
       </div>
 
@@ -42,14 +46,17 @@
           </div>
         </div>
       </div><!-- /.navbar-collapse -->
+      <div id='ex-navbar-div' class='collapse navbar-collapse'>
+        <h1>Ex is Here!</h1>
+      </div>
     </div><!-- /.container-fluid -->
   </nav>
 
   <div class='container-fluid'>
-    <div id='ex-div' class='col-md-3'></div>
-    <div class='col-md-9 col-md-offset-3'>
+    <div id='ex-div' class='col-sm-3'></div>
+    <div class='col-sm-9 col-sm-offset-3'>
       <div id='locations-div'></div>
-      <div class='col-md-12 text-center hide'><button id='reset-btn' class='btn btn-primary'>Reset</button></div>
+      <div class='col-sm-12 text-center hide'><button id='reset-btn' class='btn btn-primary'>Reset</button></div>
     </div>
   </div>
 

@@ -36,7 +36,7 @@ const resetBtn = () => {
 };
 
 const addEventListeners = () => {
-  $('#searchBar').on('keypress', filterSearchBar);
+  $('#searchBar').on('keydown', filterSearchBar);
   $('.time-btn').on('click', filterTime);
   $('#reset-btn').on('click', resetBtn);
 };
