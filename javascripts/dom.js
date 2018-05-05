@@ -3,11 +3,11 @@ const buildLocations = (array) => {
   $(array).each((i, locale) => {
     domString += `<div class="panel panel-info">`;
     domString += `<div class="panel-heading">`;
-    domString += `<h3 class="panel-title text-capitalize">${locale.name}</h3>`;
+    domString += `<h3 class="panel-title text-capitalize search">${locale.name}</h3>`;
     domString += `</div>`;
     domString +=   `<div class="panel-body">`;
     domString +=     `<img class='img-responsive img-rounded'src='${locale.img}' alt='...'>`;
-    domString +=     `<h6 class='text-capitalize'>${locale.address}</h6>`;
+    domString +=     `<h6 class='text-capitalize search'>${locale.address}</h6>`;
     domString +=     `<p>Arrival Time: <strong class='text-capitalize'>${locale.time}</strong></p>`;
     domString +=   `</div>`;
     domString += `</div>`;

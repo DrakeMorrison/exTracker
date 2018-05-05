@@ -1,6 +1,7 @@
 const locations = require('./locations.js');
 const ex = require('./ex.js');
 const dom = require('./dom.js');
+const addEvents = require('./events.js');
 
 const locationsLoad = (data) => {
   dom.buildLocations(data.locations);
@@ -22,6 +23,7 @@ const ajaxFail = (error) => {
 const initializer = () => {
   locations(locationsLoad, ajaxFail);
   ex(exLoads, ajaxFail);
+  addEvents();
 };
 
 module.exports = initializer;

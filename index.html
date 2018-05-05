@@ -11,7 +11,7 @@
 <body>
 
   <!-- Bootstrap Navbar -->
-  <nav class="navbar navbar-default navbar-fixed-top">
+  <nav class="navbar navbar-default navbar-inverse navbar-fixed-top">
     <div class="container-fluid">
       <!-- Brand and toggle get grouped for better mobile display -->
       <div class="navbar-header">
@@ -32,10 +32,10 @@
             <input id='searchBar' type="text" class="form-control" placeholder="Search Locations">
               <span class='input-groub-btn'>
                 <span class="btn-group" role="group" aria-label="...">
-                  <button id='morning-btn' type="button" class="btn btn-danger">Morning</button>
-                  <button id='afternoon-btn' type="button" class="btn btn-warning">Afternoon</button>
-                  <button id='evening-btn' type="button" class="btn btn-success">Evening</button>
-                  <button id='after-dark-btn' type="button" class="btn btn-info">After Dark</button>
+                  <button id='morning-btn' type="button" class="time-btn btn btn-danger">Morning</button>
+                  <button id='afternoon-btn' type="button" class="time-btn btn btn-warning">Afternoon</button>
+                  <button id='evening-btn' type="button" class="time-btn btn btn-success">Evening</button>
+                  <button id='after-dark-btn' type="button" class="time-btn btn btn-info">After Dark</button>
                 </span>
               </span>
             </div>
@@ -47,7 +47,10 @@
 
   <div class='container-fluid'>
     <div id='ex-div' class='col-md-3'></div>
-    <div id='locations-div' class='col-md-9 col-md-offset-3'></div>
+    <div class='col-md-9 col-md-offset-3'>
+      <div id='locations-div'></div>
+      <div class='col-md-12 text-center hide'><button id='reset-btn' class='btn btn-primary'>Reset</button></div>
+    </div>
   </div>
 
 
