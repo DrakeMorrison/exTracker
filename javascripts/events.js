@@ -1,8 +1,13 @@
 const filterSearchBar = (e) => {
+  const input = e.target.value.toLowerCase();
   const searchElements = $('.search');
-  if (searchElements.text().includes(e.target.value)) {
-    console.error('!Success!');
-  }
+  searchElements.closest('div.panel').hide();
+  searchElements.each((i, element) => {
+    if (element.textContent.toLowerCase().includes(input)) {
+      $(element).closest('div.panel').show();
+      $('#reset-btn').closest('div').removeClass('hide');
+    }
+  });
 };
 
 const filterTime = (e) => {
