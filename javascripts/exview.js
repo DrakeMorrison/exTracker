@@ -2,18 +2,15 @@ const data = require('./data.js');
 const dom = require('./dom.js');
 
 const exView = (e) => {
-  // Hide other exes
   $(e.currentTarget).siblings().each((i, ex) => {
     $(ex).hide();
   });
 
-  // TODO: filter cards by location that match ex places
   const exCardId = e.target.closest('.ex-panel').id;
   const exObject = data.getExsById(exCardId);
   const matchingLocales = getMatchingLocations(exObject.locations);
   dom.buildLocations(matchingLocales);
 
-  // TODO: hide the search bar and add a back button
   showBackBtn();
 };
 
