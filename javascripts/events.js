@@ -1,3 +1,5 @@
+const exView = require('./exview.js');
+
 const filterSearchBar = (e) => {
   const input = e.target.value.toLowerCase();
   const searchElements = $('.search');
@@ -38,6 +40,7 @@ const addEventListeners = () => {
   $('#searchBar').on('keydown', filterSearchBar);
   $('.time-btn').on('click', filterTime);
   $('#reset-btn').on('click', resetBtn);
+  $('#back-btn').on('click', exView.resetView);
 };
 
 module.exports = addEventListeners;

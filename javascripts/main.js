@@ -1,3 +1,3 @@
-const startApp = require('./data.js');
+const startApp = require('./dataGate.js');
 
 startApp();

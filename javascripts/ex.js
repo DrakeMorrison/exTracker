@@ -1,7 +1,19 @@
-const getEx = (successFn, errorFn) => {
-  $.get('/db/ex.json')
-    .done(successFn)
-    .fail(errorFn);
+// const getEx = (successFn, errorFn) => {
+//   $.get('/db/exs.json')
+//     .done(successFn)
+//     .fail(errorFn);
+// };
+
+const getExs = () => {
+  return new Promise((resolve, reject) => {
+    $.get('/db/exs.json')
+      .done((data) => {
+        resolve(data);
+      })
+      .fail((err) => {
+        reject(`Oi got an error!`, err);
+      });
+  });
 };
 
-module.exports = getEx;
+module.exports = getExs;

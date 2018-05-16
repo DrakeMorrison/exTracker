@@ -1,29 +1,26 @@
-const locations = require('./locations.js');
-const ex = require('./ex.js');
-const dom = require('./dom.js');
-const addEvents = require('./events.js');
+let exs = [];
+let locations = [];
 
-const locationsLoad = (data) => {
-  dom.buildLocations(data.locations);
+const setExs = (data) => {
+  exs = data;
 };
 
-const exLoads = (data) => {
-  const exObject = new Object();
-  exObject.name = data.name;
-  exObject.img = data.img;
-  exObject.age = data.age;
-  exObject.flaws = data.flaws.slice(0,8);
-  dom.buildEx(exObject);
+const setLocations = (data) => {
+  locations = data;
 };
 
-const ajaxFail = (error) => {
-  console.error('Something is broken here: ', error);
+const getExs = () => exs;
+
+const getLocations = () => locations;
+
+const getExsById = (testId) => {
+  return exs.filter((ex) => ex.id === testId)[0];
 };
 
-const initializer = () => {
-  locations(locationsLoad, ajaxFail);
-  ex(exLoads, ajaxFail);
-  addEvents();
+module.exports = {
+  setLocations,
+  setExs,
+  getExs,
+  getLocations,
+  getExsById,
 };
-
-module.exports = initializer;
