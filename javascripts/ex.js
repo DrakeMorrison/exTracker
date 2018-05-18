@@ -1,9 +1,4 @@
-// const getEx = (successFn, errorFn) => {
-//   $.get('/db/exs.json')
-//     .done(successFn)
-//     .fail(errorFn);
-// };
-
+'use strict';
 const getExs = () => {
   return new Promise((resolve, reject) => {
     $.get('/db/exs.json')

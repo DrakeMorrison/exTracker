@@ -1,9 +1,4 @@
-// const getLocations = (successFn, errorFn) => {
-//   $.get('/db/locations.json')
-//     .done(successFn)
-//     .fail(errorFn);
-// };
-
+'use strict';
 const getLocations = () => {
   return new Promise((resolve, reject) => {
     $.get('/db/locations.json')

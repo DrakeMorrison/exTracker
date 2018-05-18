@@ -1,3 +1,4 @@
+'use strict';
 const exView = require('./exview.js');
 
 const filterSearchBar = (e) => {
@@ -13,7 +14,8 @@ const filterSearchBar = (e) => {
 };
 
 const hideNotMatchingCards = (str) => {
-  $(`p:contains(${str})`).closest('div.panel').siblings().hide();
+  $(`p:contains(${str})`).closest('div.panel').siblings('.location-panel').hide();
+  $(`p:contains(${str})`).closest('div.panel').show();
   $('#reset-btn').closest('div').removeClass('hide');
 };
 

@@ -1,29 +1,33 @@
+'use strict';
 const locations = require('./locations.js');
 const ex = require('./ex.js');
 const dom = require('./dom.js');
 const addEvents = require('./events.js');
-const setLocations = require('./data.js').setLocations;
-const setExs = require('./data.js').setExs;
 const exView = require('./exview.js');
+const dataFile = require('./data.js');
 
 const locationsLoad = (data) => {
-  setLocations(data.locations);
-  dom.buildLocations(data.locations);
+  dataFile.setLocations(data);
+  dom.buildLocations(data);
 };
 
 const exLoads = (data) => {
-  setExs(data.exs);
+  dataFile.setExs(data.exs);
   dom.buildExs(data.exs);
   $('.ex-panel').on('click', exView.exView);
 };
 
+const loadData = () => {
+  return Promise.all([ex(), locations(),]);
+};
+
 const initializer = () => {
-  ex().then((data) => {
-    exLoads(data);
-  });
-  locations().then((data) => {
-    locationsLoad(data);
-  });
+  loadData().then((data) => {
+    exLoads(data[0]);
+    const betterLocations = dataFile.dataSmash(data);
+    locationsLoad(betterLocations);
+  }).catch(console.error.bind(console));
+
   addEvents();
 };
 

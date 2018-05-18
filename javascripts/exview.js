@@ -1,7 +1,9 @@
+'use strict';
 const data = require('./data.js');
 const dom = require('./dom.js');
 
 const exView = (e) => {
+  $('#reset-btn').closest('div').addClass('hide');
   $(e.currentTarget).siblings().each((i, ex) => {
     $(ex).hide();
   });
