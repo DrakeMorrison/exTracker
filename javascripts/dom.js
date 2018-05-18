@@ -10,7 +10,14 @@ const buildLocations = (array) => {
     domString +=     `<img class='img-responsive img-rounded'src='${locale.img}' alt='...'>`;
     domString +=     `<h6 class='text-capitalize search'>${locale.address}</h6>`;
     domString +=     `<p>Arrival Time: <strong class='text-capitalize'>${locale.time}</strong></p>`;
+    domString +=     `<h3>Exes:</h3>`;
     domString +=   `</div>`;
+    domString +=   `<ul class="list-group">`;
+    locale.exs.forEach(ex => {
+      domString +=     `<li class="list-group-item text-capitalize text-danger search">${ex}</li>`;
+    });
+    domString +=   `</ul>`;
+
     domString += `</div>`;
   });
 
@@ -22,7 +29,7 @@ const buildExs = (exs) => {
   exs.forEach((ex) => {
     domString += `<div id='${ex.id}' class="panel panel-danger ex-panel">`;
     domString += `<div class="panel-heading">`;
-    domString += `<h3 class="panel-title text-capitalize search">${ex.name}</h3>`;
+    domString += `<h3 class="panel-title text-capitalize">${ex.name}</h3>`;
     domString += `</div>`;
     domString += `<div class="panel-body">`;
     domString += `<img class='img-responsive'src='${ex.img}' alt='...'>`;
