@@ -1,3 +1,4 @@
-const startApp = require('./data.js');
+'use strict';
+const startApp = require('./dataGate.js');
 
 startApp();

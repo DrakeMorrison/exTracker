@@ -1,3 +1,6 @@
+'use strict';
+const exView = require('./exview.js');
+
 const filterSearchBar = (e) => {
   const input = e.target.value.toLowerCase();
   const searchElements = $('.search');
@@ -11,7 +14,8 @@ const filterSearchBar = (e) => {
 };
 
 const hideNotMatchingCards = (str) => {
-  $(`p:contains(${str})`).closest('div.panel').siblings().hide();
+  $(`p:contains(${str})`).closest('div.panel').siblings('.location-panel').hide();
+  $(`p:contains(${str})`).closest('div.panel').show();
   $('#reset-btn').closest('div').removeClass('hide');
 };
 
@@ -38,6 +42,7 @@ const addEventListeners = () => {
   $('#searchBar').on('keydown', filterSearchBar);
   $('.time-btn').on('click', filterTime);
   $('#reset-btn').on('click', resetBtn);
+  $('#back-btn').on('click', exView.resetView);
 };
 
 module.exports = addEventListeners;
