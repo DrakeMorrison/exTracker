@@ -1,6 +1,6 @@
 'use strict';
 
-const apiKey = '';
+let apiKey = '';
 
 function firebaseKey () {
   return new Promise(function (resolve, reject) {
