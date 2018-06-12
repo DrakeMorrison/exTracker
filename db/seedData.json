@@ -1,0 +1,90 @@
+{
+  "exs": [
+    {
+      "img": "https://i.ytimg.com/vi/8JKx0Eih_c8/hqdefault.jpg",
+      "name": "Dudette",
+      "age": 8000,
+      "flaws": [
+        "Sleeps in Late",
+        "Does stupid stuff",
+        "Eats all my food",
+        "Has Stalker Tendencies",
+        "is basically poop"
+      ],
+      "locations": [1, 2, 3],
+      "id": "ex1"
+    },
+    {
+      "img": "https://i.ytimg.com/vi/8JKx0Eih_c8/hqdefault.jpg",
+      "name": "Jane",
+      "age": 27,
+      "flaws": [
+        "Sleeps in Late",
+        "Does stupid stuff",
+        "Eats all my food",
+        "Has Stalker Tendencies",
+        "is basically poop"
+      ],
+      "locations": [2, 3, 4],
+      "id": "ex2"
+    },
+    {
+      "img": "https://i.ytimg.com/vi/8JKx0Eih_c8/hqdefault.jpg",
+      "name": "Elizabeth",
+      "age": 20,
+      "flaws": [
+        "Sleeps in Late",
+        "Does stupid stuff",
+        "Eats all my food",
+        "Has Stalker Tendencies",
+        "is basically poop"
+      ],
+      "locations": [4, 5, 6],
+      "id": "ex3"
+    }
+  ],
+  "locations": [
+    {
+      "img": "https://image.slidesharecdn.com/toursinabudhabippt2-161029130026/95/top-15-honeymoon-destinations-in-the-world-13-638.jpg?cb=1477746280 ",
+      "name": "The Bane of Relationship",
+      "address": "Super evil place",
+      "time": "After Dark",
+      "locationId": 1
+    },
+    {
+      "img": "https://media-api.xogrp.com/images/e5005818-fa4c-4c0b-b1c2-e5e8c93150fb~rs_768.h",
+      "name": "Lair of Friend-Zone",
+      "address": "very bad place",
+      "time": "Morning",
+      "locationId": 2
+    },
+    {
+      "img": "https://www.zicasso.com/sites/default/files/styles/full_2048custom_zictheme_breakpoint_standard_1x/public/headerimages/tours/tahiti_honeymoon_ltl.jpg?timestamp=1417726517",
+      "name": "Pit of Emptiness",
+      "address": "even more bad",
+      "time": "Afternoon",
+      "locationId": 3
+    },
+    {
+      "img": "https://image.slidesharecdn.com/toursinabudhabippt2-161029130026/95/top-15-honeymoon-destinations-in-the-world-13-638.jpg?cb=1477746280 ",
+      "name": "The Bane of Relationship",
+      "address": "Super evil place",
+      "time": "Evening",
+      "locationId": 4
+    },
+    {
+      "img": "https://media-api.xogrp.com/images/e5005818-fa4c-4c0b-b1c2-e5e8c93150fb~rs_768.h",
+      "name": "Lair of Friend-Zone",
+      "address": "very bad place",
+      "time": "Morning",
+      "locationId": 5
+    },
+    {
+      "img": "https://www.zicasso.com/sites/default/files/styles/full_2048custom_zictheme_breakpoint_standard_1x/public/headerimages/tours/tahiti_honeymoon_ltl.jpg?timestamp=1417726517",
+      "name": "Pit of Emptiness",
+      "address": "even more bad",
+      "time": "Afternoon",
+      "locationId": 6
+    }
+  ]
+}
