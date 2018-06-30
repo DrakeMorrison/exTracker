@@ -1,31 +1,30 @@
 'use strict';
-const locations = require('./locations.js');
-const ex = require('./ex.js');
 const dom = require('./dom.js');
 const addEvents = require('./events.js');
 const exView = require('./exview.js');
 const dataFile = require('./data.js');
+const {getKeys, getData,} = require('./firebaseApi.js');
 
 const locationsLoad = (data) => {
-  dataFile.setLocations(data);
   dom.buildLocations(data);
 };
 
 const exLoads = (data) => {
-  dataFile.setExs(data.exs);
-  dom.buildExs(data.exs);
+  dom.buildExs(data);
   $('.ex-panel').on('click', exView.exView);
 };
 
 const loadData = () => {
-  return Promise.all([ex(), locations(),]);
+  return Promise.all([getData('exs'), getData('locations'),]);
 };
 
 const initializer = () => {
-  loadData().then((data) => {
-    exLoads(data[0]);
-    const betterLocations = dataFile.dataSmash(data);
-    locationsLoad(betterLocations);
+  getKeys().then(() => {
+    loadData().then((data) => {
+      exLoads(data[0]);
+      const betterLocations = dataFile.dataSmash(data);
+      locationsLoad(betterLocations);
+    }).catch(console.error.bind(console));
   }).catch(console.error.bind(console));
 
   addEvents();

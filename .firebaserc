@@ -1,1 +1,5 @@
-{}
+{
+  "projects": {
+    "default": "ex-tracker-32e4e"
+  }
+}
