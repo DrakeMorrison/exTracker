@@ -15,10 +15,13 @@ function firebaseKey () {
 }
 
 function getKeys () {
-  firebaseKey().then(function (results) {
-    apiKey = results;
-    firebase.initializeApp(results);
-  }).catch(console.error.bind(console));
+  return new Promise(resolve => {
+    firebaseKey().then(function (results) {
+      apiKey = results;
+      firebase.initializeApp(apiKey);
+      resolve();
+    }).catch(console.error.bind(console));
+  });
 }
 
 function getData (collection) {

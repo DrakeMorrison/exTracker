@@ -10,7 +10,7 @@ const locationsLoad = (data) => {
 };
 
 const exLoads = (data) => {
-  dom.buildExs(data.exs);
+  dom.buildExs(data);
   $('.ex-panel').on('click', exView.exView);
 };
 
@@ -19,11 +19,12 @@ const loadData = () => {
 };
 
 const initializer = () => {
-  getKeys();
-  loadData().then((data) => {
-    exLoads(data[0]);
-    const betterLocations = dataFile.dataSmash(data);
-    locationsLoad(betterLocations);
+  getKeys().then(() => {
+    loadData().then((data) => {
+      exLoads(data[0]);
+      const betterLocations = dataFile.dataSmash(data);
+      locationsLoad(betterLocations);
+    }).catch(console.error.bind(console));
   }).catch(console.error.bind(console));
 
   addEvents();
